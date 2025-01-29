@@ -48,7 +48,7 @@ These features provide scale-invariant information and capture underlying market
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/letsslipaway/btc_price_prediction.git
+   !git clone https://github.com/letsslipaway/btc_price_prediction.git
    cd btc_price_prediction
    
 2. Install the required dependencies:
@@ -57,4 +57,4 @@ These features provide scale-invariant information and capture underlying market
 
 3. Run the Jupyter Notebook
    ```bash
-   jupyter notebook btc_price_prediction.ipynb
+   !jupyter notebook BTC_price_prediction.ipynb
