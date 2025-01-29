@@ -43,3 +43,15 @@ These features provide scale-invariant information and capture underlying market
 
 5. **Final Evaluation**:  
    Evaluate the optimized XGBoost model on the untouched test set with the selected threshold, achieving a precision of 56% and recall of 42%.
+
+## How to Run
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/letsslipaway/btc_price_prediction.git
+   cd btc_price_prediction
+   
+2. Install the required dependencies:
+   pip install -r requirements.txt
+
+3. Run the Jupyter Notebook (btc_price_prediction.ipynb)
