@@ -52,6 +52,9 @@ These features provide scale-invariant information and capture underlying market
    cd btc_price_prediction
    
 2. Install the required dependencies:
+   ```bash
    pip install -r requirements.txt
 
-3. Run the Jupyter Notebook (btc_price_prediction.ipynb)
+3. Run the Jupyter Notebook
+   ```bash
+   jupyter notebook btc_price_prediction.ipynb
