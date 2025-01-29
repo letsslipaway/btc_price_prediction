@@ -46,15 +46,36 @@ These features provide scale-invariant information and capture underlying market
 
 ## How to Run
 
-1. Clone the repository:
+### Option 1: Run in Google Colab
+
+You can run the project in Google Colab by clicking the link below:
+[Open in Google Colab](https://colab.research.google.com/github/letsslipaway/btc_price_prediction/blob/main/BTC_price_prediction.ipynb)
+
+The notebook will open, and you can start running the cells. The first cell contains the installation of dependencies. Simply execute each cell in order.
+
+### Option 2: Run Locally
+
+If you prefer to run the project locally, follow these steps:
+
+1. **Clone the repository:**
    ```bash
-   !git clone https://github.com/letsslipaway/btc_price_prediction.git
-   %cd btc_price_prediction
-   
-2. Install the required dependencies:
+   git clone https://github.com/letsslipaway/btc_price_prediction.git
+   cd btc_price_prediction
+   ```
+
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
+   ```
 
-3. Run the Jupyter Notebook
+3. **Install Jupyter Notebook (if you don't have it yet):**
    ```bash
-   !jupyter notebook BTC_price_prediction.ipynb
+   pip install jupyter
+   ```
+
+4. **Run Jupyter Notebook:**
+   ```bash
+   jupyter notebook
+   ```
+
+   This will open a web page in your browser. In the interface, navigate to the `BTC_price_prediction.ipynb` file and click on it to open.
