@@ -1,6 +1,6 @@
 import os
 from telegram import Update, ReplyKeyboardMarkup
-from telegram.ext import ApplicationBuilder, CommandHandler
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from dotenv import load_dotenv
 import joblib
 import numpy as np
@@ -174,13 +174,13 @@ def make_sample(df):
 
 
 # start command
-async def start(update: Update, context: CallbackContext):
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [["/about", "/predict"]]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
     await update.message.reply_text("Choose what you want:", reply_markup=reply_markup)
 
 # about command
-async def about(update: Update, context: CallbackContext):
+async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
     info = """
     About:
 This model predicts the future price movement of BTC (Bitcoin) over the next 10 days, with a focus on identifying whether it will increase by 5% without falling below 4%. The predictions are based on a machine learning model that analyzes historical data and current market conditions. The accuracy of the predictions is around 55-60%, depending on the volatility and other factors influencing the market.
@@ -192,7 +192,7 @@ This model was created for research purposes and is not intended as financial ad
     await update.message.reply_text(info)
 
 # predict command
-async def predict(update: Update, context: CallbackContext):
+async def predict(update: Update, context: ContextTypes.DEFAULT_TYPE):
     df = load_data(ticker='BTC-USD', period='3mo')
     df = add_proportional_indicators(df)
     df = add_fear_greed_index(df, load_fear_greed_index())
