@@ -5,11 +5,10 @@ from dotenv import load_dotenv
 import joblib
 import numpy as np
 import pandas as pd
-import xgboost
 import yfinance as yf
 import ta
-from pandas_datareader import data as pdr
 import requests
+from pandas_datareader import data as pdr
 
 # loading env variables
 load_dotenv()
