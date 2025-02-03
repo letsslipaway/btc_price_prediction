@@ -2,7 +2,9 @@
 
 ## Project Goal
 The objective of this project is to predict whether the price of Bitcoin (BTC-USD) will increase by a specified percentage (e.g., +5%) within a given time horizon, with a probability greater than 50%. This prediction aims to support a potentially stable profit strategy by minimizing false signals.
+
 Moreover, the model is integrated into a Telegram bot, allowing users to receive real-time price predictions and confidence scores. This implementation demonstrates how machine learning can be applied in a practical, interactive way, providing users with an easy-to-use tool for monitoring Bitcoin price trends.
+
 It's worth mentioning that this model was created for research purposes and is not intended as financial advice or as a financial tool.
 
 ## Dataset
