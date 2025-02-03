@@ -1,6 +1,6 @@
 import os
 from telegram import Update, ReplyKeyboardMarkup
-from telegram.ext import Application, CommandHandler, CallbackContext
+from telegram.ext import ApplicationBuilder, CommandHandler
 from dotenv import load_dotenv
 import joblib
 import numpy as np
@@ -210,7 +210,7 @@ async def predict(update: Update, context: CallbackContext):
 
 # bot launch
 def main():
-    app = Application.builder().token(TOKEN).build()
+    app = ApplicationBuilder().token(TOKEN).build()
 
     # Добавляем команды
     app.add_handler(CommandHandler("start", start))
