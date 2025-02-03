@@ -9,6 +9,8 @@ import yfinance as yf
 import ta
 import requests
 from fredapi import Fred
+import warnings
+warnings.filterwarnings('ignore')
 
 # loading env variables
 load_dotenv()
@@ -177,7 +179,7 @@ def make_sample(df):
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     keyboard = [["/about", "/predict"]]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
-    await update.message.reply_text("Choose what you want:", reply_markup=reply_markup)
+    await update.message.reply_text("Please choose one of the options below:", reply_markup=reply_markup)
 
 # about command
 async def about(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -204,9 +206,9 @@ async def predict(update: Update, context: ContextTypes.DEFAULT_TYPE):
     prob_class1 = probs[0, 1]
     tau = 0.65
     if prob_class1 >= tau:
-        result = f'The model predicts with a confidence of {prob_class1:.2f} that BTC may increase by 5% and not fall below 4% within the next 10 days.'
+        result = f'The model predicts with a confidence of {prob_class1:.2f} that BTC price may increase by 5% and not fall below 4% within the next 10 days.'
     else:
-        result = 'The model predicts that BTC will not increase by 5% or fall below 4% within the next 10 days.'
+        result = 'The model predicts that BTC will not increase by 5% or will fall below 4% within the next 10 days.'
     await update.message.reply_text(result)
 
 # bot launch
