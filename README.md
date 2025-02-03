@@ -1,10 +1,9 @@
-# btc_price_prediction
-Simple ML model, which predicts BTC price movements
-
 # Bitcoin Price Prediction Project
 
 ## Project Goal
 The objective of this project is to predict whether the price of Bitcoin (BTC-USD) will increase by a specified percentage (e.g., +5%) within a given time horizon, with a probability greater than 50%. This prediction aims to support a potentially stable profit strategy by minimizing false signals.
+Moreover, the model is integrated into a Telegram bot, allowing users to receive real-time price predictions and confidence scores. This implementation demonstrates how machine learning can be applied in a practical, interactive way, providing users with an easy-to-use tool for monitoring Bitcoin price trends.
+It's worth mentioning that this model was created for research purposes and is not intended as financial advice or as a financial tool.
 
 ## Dataset
 Our core dataset consists of historical BTC-USD price data sourced from **Yandex Finance**. This dataset provides OHLCV data (Open, High, Low, Close, Volume) that serves as the foundation for feature engineering.
@@ -79,3 +78,9 @@ If you prefer to run the project locally, follow these steps:
    ```
 
    This will open a web page in your browser. In the interface, navigate to the `BTC_price_prediction.ipynb` file and click on it to open.
+
+## Usage
+The bot can be accessed through the following link:
+[Bitcoin Price Prediction Bot](https://t.me/btcpricepredictionbot)
+
+Once the bot is added to your Telegram, you can interact with it to get Bitcoin price predictions. The bot may provide daily updates on the probability of Bitcoin’s price increasing by 5% within the next 10 days, along with a confidence level for each prediction.
