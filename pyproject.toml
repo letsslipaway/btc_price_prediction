@@ -8,9 +8,9 @@ dependencies = [
     "joblib>=1.4.2",
     "numpy>=2.2.2",
     "pandas>=2.2.3",
-    "pandas-datareader>=0.10.0",
     "python-dotenv>=1.0.1",
     "ta>=0.11.0",
     "python-telegram-bot==21.10",
     "yfinance>=0.2.52",
+    "fredapi>=0.5.2",
 ]
