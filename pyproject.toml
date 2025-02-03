@@ -3,7 +3,7 @@ name = "BTC prive prediction"
 version = "0.1.0"
 description = ""
 authors = ["Leo Fisher"]
-requires-python = "=3.11"
+requires-python = "==3.11"
 dependencies = [
     "joblib>=1.4.2",
     "numpy>=2.2.2",
