@@ -12,5 +12,5 @@ dependencies = [
     "ta>=0.11.0",
     "python-telegram-bot==21.10",
     "yfinance>=0.2.52",
-    "fredapi>=0.5.2",
+    "fredapi==0.5.2"
 ]
