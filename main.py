@@ -12,7 +12,7 @@ from fredapi import Fred
 
 # loading env variables
 load_dotenv()
-TOKEN = os.getenv('TOKEN')
+tg_token = os.getenv('TOKEN')
 fred_key = os.getenv('FRED')
 
 model = joblib.load("BTC_xgb.pkl")
@@ -211,7 +211,7 @@ async def predict(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # bot launch
 def main():
-    app = ApplicationBuilder().token(TOKEN).build()
+    app = ApplicationBuilder().token(tg_token).build()
 
     # Добавляем команды
     app.add_handler(CommandHandler("start", start))
