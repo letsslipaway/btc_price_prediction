@@ -1,2 +1,0 @@
-[phases.setup]
-nix_packages = ["python310", "python310Packages.setuptools"]
