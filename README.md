@@ -17,7 +17,6 @@ We engineered a comprehensive set of **proportional technical indicators** to en
 - **Williams %R**
 - **Bollinger Bands %B**
 - **MACD** (proportional form)
-- **ADX** with **DI+** and **DI-**
 - **MFI** (Money Flow Index)
 - **SSI** (Sentiment Strength Index, if applicable)
 - **ATR** (Average True Range, relative)
