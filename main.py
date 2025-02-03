@@ -8,11 +8,12 @@ import pandas as pd
 import yfinance as yf
 import ta
 import requests
-from pandas_datareader import data as pdr
+from fredapi import Fred
 
 # loading env variables
 load_dotenv()
 TOKEN = os.getenv("TOKEN")
+fred_key = os.getenv("FRED")
 
 model = joblib.load("BTC_xgb.pkl")
 
@@ -131,8 +132,8 @@ def add_dollar_index_feature(df):
     return df
 
 def add_macro_indicators(df_prices):
-    start_date = df_prices.index.min()
-    end_date = df_prices.index.max()
+    start_date = df_prices.index.min().strftime('%Y-%m-%d')
+    end_date = df_prices.index.max().strftime('%Y-%m-%d')
 
     df_prices = df_prices.copy()
     if not isinstance(df_prices.index, pd.DatetimeIndex):
@@ -143,14 +144,15 @@ def add_macro_indicators(df_prices):
         'FedFunds': 'FEDFUNDS',  # Effective Federal Funds Rate
     }
 
+    fred = Fred(api_key=fred_key)
+
     last_values = {}
 
     for col_name, fred_code in macro_series.items():
         try:
-            temp = pdr.DataReader(fred_code, 'fred', start_date, end_date)
-            temp = temp.dropna()
+            temp = fred.get_series(fred_code, start_date, end_date).dropna()
             if not temp.empty:
-                last_value = temp[fred_code].iloc[-1]
+                last_value = temp.iloc[-1]
                 last_values[col_name] = last_value
             else:
                 last_values[col_name] = None
@@ -163,7 +165,7 @@ def add_macro_indicators(df_prices):
         df_prices[col] = value
 
     return df_prices
-
+    
 def make_sample(df):
     df.drop(columns=['Close','Open','High','Low','Volume'], inplace=True)
     sample = df.iloc[-1]
