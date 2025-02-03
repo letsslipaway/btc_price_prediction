@@ -12,8 +12,8 @@ from fredapi import Fred
 
 # loading env variables
 load_dotenv()
-TOKEN = os.getenv("TOKEN")
-fred_key = os.getenv("FRED")
+TOKEN = os.getenv(tg_TOKEN)
+fred_key = os.getenv(FRED)
 
 model = joblib.load("BTC_xgb.pkl")
 
