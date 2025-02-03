@@ -49,7 +49,7 @@ These features provide scale-invariant information and capture underlying market
 ### Option 1: Run in Google Colab
 
 You can run the project in Google Colab by clicking the link below:
-[Open in Google Colab](https://colab.research.google.com/github/letsslipaway/btc_price_prediction/tree/blob/main//model/BTC_price_prediction.ipynb)
+[Open in Google Colab](https://colab.research.google.com/github/letsslipaway/btc_price_prediction/blob/main/model/BTC_price_prediction.ipynb)
 
 The notebook will open, and you can start running the cells. The first cell contains the installation of dependencies. Simply execute each cell in order.
 
